@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" rx="150" fill="#FCEEE9"/>
+  <!-- Chef portrait avatar -->
+  <circle cx="150" cy="130" r="50" fill="#E0A96D"/>
+  <!-- Chef Hat -->
+  <path d="M 110 90 C 90 40, 140 10, 150 20 C 160 10, 210 40, 190 90 Z" fill="#FFFFFF"/>
+  <rect x="115" y="85" width="70" height="15" fill="#FFFFFF"/>
+  <!-- Hair & Smile -->
+  <path d="M 105 110 C 110 90, 190 90, 195 110" fill="#4A2E18"/>
+  <path d="M 135 150 Q 150 165 165 150" fill="none" stroke="#4A2E18" stroke-width="3" stroke-linecap="round"/>
+  <!-- Eyes -->
+  <circle cx="135" cy="130" r="4" fill="#4A2E18"/>
+  <circle cx="165" cy="130" r="4" fill="#4A2E18"/>
+  <!-- Uniform Coat -->
+  <path d="M 70 270 C 70 200, 230 200, 230 270 Z" fill="#FFFFFF" stroke="#DDA15E" stroke-width="3"/>
+  <!-- Red neckerchief -->
+  <polygon points="135,190 165,190 150,220" fill="#C1121F"/>
+</svg>

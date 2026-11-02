@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "order_id": 1,
+    "product_id": 1,
+    "product_name": "Belgian Chocolate Truffle Cake",
+    "unit_price": 749,
+    "quantity": 2,
+    "subtotal": 1498
+  },
+  {
+    "id": 2,
+    "order_id": 2,
+    "product_id": 13,
+    "product_name": "Black Forest Cherry Pastry",
+    "unit_price": 180,
+    "quantity": 1,
+    "subtotal": 180
+  },
+  {
+    "id": 3,
+    "order_id": 3,
+    "product_id": 3,
+    "product_name": "Classic Vanilla Buttercream Cake",
+    "unit_price": 649,
+    "quantity": 1,
+    "subtotal": 649
+  },
+  {
+    "id": 4,
+    "order_id": 4,
+    "product_id": 8,
+    "product_name": "Lotus Biscoff Crumble Cupcake",
+    "unit_price": 399,
+    "quantity": 1,
+    "subtotal": 399
+  }
+]

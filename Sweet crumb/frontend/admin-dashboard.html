@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Sweet Crumbs Bakery Suite</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    
+    <!-- Sidebar -->
+    <aside class="admin-sidebar" id="adminSidebar">
+      <div class="sidebar-header">
+        <img src="assets/images/logo.svg" alt="Sweet Crumbs Logo" style="filter: brightness(0) invert(1);">
+      </div>
+
+      <ul class="sidebar-menu">
+        <li>
+          <a class="nav-tab-link active" data-tab="overview">
+            <i class="bi bi-speedometer2"></i>
+            <span>Overview &amp; Stats</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-tab-link" data-tab="orders">
+            <i class="bi bi-bag-check"></i>
+            <span>Orders Management</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-tab-link" data-tab="products">
+            <i class="bi bi-cake2"></i>
+            <span>Products &amp; Menu</span>
+          </a>
+        </li>
+        <li>
+          <a class="nav-tab-link" data-tab="enquiries">
+            <i class="bi bi-chat-left-dots"></i>
+            <span>Customer Inquiries</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none text-light small mb-3">
+          <i class="bi bi-box-arrow-up-right text-warning"></i>
+          <span>View Public Website</span>
+        </a>
+        <button id="admin-logout-btn" class="btn btn-outline-danger btn-sm w-100 rounded-pill">
+          <i class="bi bi-power me-1"></i> Log Out
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+      
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div class="d-flex align-items-center gap-3">
+          <button class="btn btn-sm btn-outline-secondary d-lg-none" id="sidebarToggle">
+            <i class="bi bi-list"></i>
+          </button>
+          <h3 class="page-title" id="page-title-text">Bakery Overview</h3>
+        </div>
+        <div class="admin-user-profile">
+          <div class="admin-avatar-pill">
+            <i class="bi bi-person-circle me-1 text-warning"></i>
+            <span id="admin-username-badge">admin</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dashboard Body -->
+      <main class="admin-container">
+        
+        <!-- Feedback Alert -->
+        <div id="dashboard-alert-box" class="d-none"></div>
+
+        <!-- TAB 1: OVERVIEW & STATS -->
+        <div class="tab-content-section" id="tab-overview">
+          
+          <!-- Metrics Cards Grid -->
+          <div class="row g-4 mb-4">
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card">
+                <div class="stat-icon stat-icon-gold">
+                  <i class="bi bi-bag-check-fill"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-label">Total Orders</div>
+                  <h3 class="stat-value" id="stat-total-orders">0</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card">
+                <div class="stat-icon stat-icon-pink">
+                  <i class="bi bi-hourglass-split"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-label">Pending Orders</div>
+                  <h3 class="stat-value text-danger" id="stat-pending-orders">0</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card">
+                <div class="stat-icon stat-icon-blue">
+                  <i class="bi bi-cake2-fill"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-label">Active Products</div>
+                  <h3 class="stat-value" id="stat-total-products">0</h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card">
+                <div class="stat-icon stat-icon-green">
+                  <i class="bi bi-currency-rupee"></i>
+                </div>
+                <div class="stat-content">
+                  <div class="stat-label">Total Revenue</div>
+                  <h3 class="stat-value text-success" id="stat-total-revenue">₹0.00</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons & Recent Orders Overview -->
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <div class="admin-card">
+                <div class="admin-card-header">
+                  <h4><i class="bi bi-clock-history me-2 text-warning"></i> Recent Orders</h4>
+                  <button class="btn btn-sm btn-outline-bakery" onclick="switchTab('orders')">View All</button>
+                </div>
+                <div class="admin-card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table table-admin mb-0">
+                      <thead>
+                        <tr>
+                          <th>Ref</th>
+                          <th>Customer</th>
+                          <th>Total</th>
+                          <th>Status</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody id="recent-orders-table-body">
+                        <tr><td colspan="5" class="text-center py-4 text-muted">Loading recent orders...</td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="admin-card">
+                <div class="admin-card-header">
+                  <h4><i class="bi bi-lightning-charge me-2 text-warning"></i> Quick Actions</h4>
+                </div>
+                <div class="admin-card-body d-grid gap-3">
+                  <button class="btn btn-primary-bakery py-2 text-start" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                    <i class="bi bi-plus-circle me-2"></i> Add New Bakery Product
+                  </button>
+                  <button class="btn btn-outline-bakery py-2 text-start" onclick="switchTab('orders')">
+                    <i class="bi bi-search me-2"></i> Review Pending Orders
+                  </button>
+                  <button class="btn btn-outline-secondary py-2 text-start" onclick="switchTab('enquiries')">
+                    <i class="bi bi-envelope me-2"></i> Check Customer Inquiries
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- TAB 2: ORDERS MANAGEMENT -->
+        <div class="tab-content-section d-none" id="tab-orders">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h4><i class="bi bi-bag-check me-2 text-warning"></i> Customer Orders</h4>
+              
+              <!-- Toolbar -->
+              <div class="admin-toolbar">
+                <div class="input-group" style="width: 250px;">
+                  <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+                  <input type="text" id="order-search-input" class="form-control" placeholder="Search customer, phone, ref...">
+                </div>
+                <select id="order-status-filter" class="form-select" style="width: 170px;">
+                  <option value="All">All Statuses</option>
+                  <option value="Pending">Pending</option>
+                  <option value="Confirmed">Confirmed</option>
+                  <option value="Preparing">Preparing</option>
+                  <option value="Ready">Ready</option>
+                  <option value="Completed">Completed</option>
+                  <option value="Cancelled">Cancelled</option>
+                </select>
+                <button class="btn btn-outline-secondary btn-sm" onclick="loadAdminOrders()"><i class="bi bi-arrow-clockwise"></i> Refresh</button>
+              </div>
+            </div>
+
+            <div class="admin-card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-admin">
+                  <thead>
+                    <tr>
+                      <th>Reference</th>
+                      <th>Customer &amp; Phone</th>
+                      <th>Baking Date</th>
+                      <th>Items Summary</th>
+                      <th>Total</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orders-table-body">
+                    <tr><td colspan="7" class="text-center py-4 text-muted">Loading orders...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: PRODUCTS & MENU -->
+        <div class="tab-content-section d-none" id="tab-products">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h4><i class="bi bi-cake2 me-2 text-warning"></i> Bakery Menu Management</h4>
+              <button class="btn btn-primary-bakery btn-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                <i class="bi bi-plus-lg me-1"></i> Add New Product
+              </button>
+            </div>
+
+            <div class="admin-card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-admin">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Category</th>
+                      <th>Price</th>
+                      <th>Availability</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-products-table-body">
+                    <tr><td colspan="6" class="text-center py-4 text-muted">Loading product catalog...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 4: ENQUIRIES -->
+        <div class="tab-content-section d-none" id="tab-enquiries">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h4><i class="bi bi-chat-left-dots me-2 text-warning"></i> Customer Contact Inquiries</h4>
+              <select id="enquiry-status-filter" class="form-select form-select-sm" style="width: 160px;" onchange="loadAdminEnquiries()">
+                <option value="All">All Inquiries</option>
+                <option value="Pending">Pending</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            </div>
+
+            <div class="admin-card-body p-0">
+              <div class="table-responsive">
+                <table class="table table-admin">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Sender</th>
+                      <th>Subject</th>
+                      <th>Message</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="enquiries-table-body">
+                    <tr><td colspan="6" class="text-center py-4 text-muted">Loading customer inquiries...</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- MODAL: Order Details View -->
+  <div class="modal fade" id="orderDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading"><i class="bi bi-receipt me-2 text-warning"></i> Order Details: <span id="view-order-ref" class="font-monospace text-primary"></span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3">
+                <h6 class="fw-bold mb-2">Customer Information</h6>
+                <div><strong>Name:</strong> <span id="view-customer-name"></span></div>
+                <div><strong>Phone:</strong> <span id="view-customer-phone"></span></div>
+                <div><strong>Email:</strong> <span id="view-customer-email">None</span></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3">
+                <h6 class="fw-bold mb-2">Fulfilment &amp; Schedule</h6>
+                <div><strong>Date:</strong> <span id="view-order-date"></span></div>
+                <div><strong>Type:</strong> <span id="view-fulfilment-type"></span></div>
+                <div><strong>Address:</strong> <span id="view-delivery-address">N/A</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h6 class="fw-bold">Special Instructions:</h6>
+            <div id="view-order-instructions" class="p-2 border rounded-3 bg-light small text-muted">None</div>
+          </div>
+
+          <h6 class="fw-bold mb-2">Order Items Breakdown:</h6>
+          <div class="table-responsive border rounded-3 mb-3">
+            <table class="table mb-0 small">
+              <thead class="table-light">
+                <tr>
+                  <th>Product</th>
+                  <th>Unit Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody id="view-order-items-body"></tbody>
+              <tfoot>
+                <tr class="fw-bold">
+                  <td colspan="3" class="text-end">Total Amount:</td>
+                  <td id="view-order-total" class="text-dark fs-6">₹0.00</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- Status Update Dropdown -->
+          <div class="d-flex align-items-center justify-content-between p-3 bg-light rounded-3">
+            <span class="fw-semibold">Update Status:</span>
+            <div class="d-flex gap-2">
+              <select id="modal-update-status-select" class="form-select form-select-sm" style="width: 170px;">
+                <option value="Pending">Pending</option>
+                <option value="Confirmed">Confirmed</option>
+                <option value="Preparing">Preparing</option>
+                <option value="Ready">Ready</option>
+                <option value="Completed">Completed</option>
+                <option value="Cancelled">Cancelled</option>
+              </select>
+              <button id="modal-save-status-btn" class="btn btn-primary-bakery btn-sm">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Add Product -->
+  <div class="modal fade" id="addProductModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading"><i class="bi bi-plus-circle me-2 text-warning"></i> Add New Bakery Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="add-product-form">
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label class="form-label">Product Name <span class="text-danger">*</span></label>
+              <input type="text" class="form-control" name="name" required placeholder="e.g. Pistachio Raspberry Entremet">
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Category <span class="text-danger">*</span></label>
+                <select class="form-select" name="category" required>
+                  <option value="Birthday Cakes">Birthday Cakes</option>
+                  <option value="Cupcakes">Cupcakes</option>
+                  <option value="Cookies">Cookies</option>
+                  <option value="Pastries">Pastries</option>
+                  <option value="Brownies">Brownies</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Price (₹) <span class="text-danger">*</span></label>
+                <input type="number" step="0.01" class="form-control" name="price" required placeholder="399.00">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Description <span class="text-danger">*</span></label>
+              <textarea class="form-control" name="description" rows="3" required placeholder="Describe ingredients, texture, layers..."></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Image URL / Asset Path</label>
+              <input type="text" class="form-control" name="image_url" value="assets/images/cake-chocolate.svg" placeholder="assets/images/cake-chocolate.svg">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="available" id="addAvailable" checked>
+              <label class="form-check-label fw-semibold" for="addAvailable">Available for Customer Orders</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-bakery btn-sm">Create Product</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Edit Product -->
+  <div class="modal fade" id="editProductModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header">
+          <h5 class="modal-title font-heading"><i class="bi bi-pencil me-2 text-warning"></i> Edit Bakery Product</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <form id="edit-product-form">
+          <input type="hidden" name="id" id="edit-p-id">
+          <div class="modal-body p-4">
+            <div class="mb-3">
+              <label class="form-label">Product Name</label>
+              <input type="text" class="form-control" name="name" id="edit-p-name" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Category</label>
+                <select class="form-select" name="category" id="edit-p-category" required>
+                  <option value="Birthday Cakes">Birthday Cakes</option>
+                  <option value="Cupcakes">Cupcakes</option>
+                  <option value="Cookies">Cookies</option>
+                  <option value="Pastries">Pastries</option>
+                  <option value="Brownies">Brownies</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Price (₹)</label>
+                <input type="number" step="0.01" class="form-control" name="price" id="edit-p-price" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" name="description" id="edit-p-desc" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Image URL / Asset Path</label>
+              <input type="text" class="form-control" name="image_url" id="edit-p-img">
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="available" id="edit-p-available">
+              <label class="form-check-label fw-semibold" for="edit-p-available">Available for Customer Orders</label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary-bakery btn-sm">Update Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Admin Dashboard Script -->
+  <script src="js/admin-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "sweet-crumbs-bakery",
+  "version": "1.0.0",
+  "description": "Sweet Crumbs — Premium Bakery Company Profile Website with full-stack Node.js and Express",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "setup-db": "node backend/scripts/setup-db.js",
+    "check-db": "node backend/scripts/test-db-connection.js",
+    "create-admin": "node backend/scripts/create-admin.js",
+    "generate-assets": "node backend/scripts/generate-assets.js",
+    "test": "node backend/scripts/test-endpoints.js"
+  },
+  "keywords": [
+    "bakery",
+    "ecommerce",
+    "express",
+    "mysql",
+    "fullstack",
+    "web-programming"
+  ],
+  "author": "Sweet Crumbs Team",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql2": "^3.9.7"
+  }
+}

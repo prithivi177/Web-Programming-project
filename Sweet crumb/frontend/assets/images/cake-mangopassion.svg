@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB8500"/><stop offset="100%" stop-color="#D45B00"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#2C1810" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F2E9E4"/>
+      <stop offset="100%" stop-color="#E2D4CC"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  
+  <ellipse cx="300" cy="310" rx="220" ry="60" fill="#000000" opacity="0.1" filter="url(#softShadow)"/>
+  <ellipse cx="300" cy="305" rx="210" ry="50" fill="url(#plateGrad)"/>
+  <ellipse cx="300" cy="305" rx="180" ry="40" fill="none" stroke="#DDA15E" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Mango Passion Cheesecake -->
+  <g transform="translate(300, 240)">
+    <!-- Biscuit Graham crust -->
+    <path d="M -115 15 C -115 45, 115 45, 115 15 L 115 -5 C 115 25, -115 25, -115 -5 Z" fill="#B07D3E" stroke="#8C5C23" stroke-width="2"/>
+    <!-- Cream cheese body -->
+    <path d="M -115 -5 C -115 25, 115 25, 115 -5 L 115 -55 C 115 -85, -115 -85, -115 -55 Z" fill="#FFF8E7" stroke="#E6D3A3" stroke-width="2"/>
+    <!-- Mango Glaze Top -->
+    <ellipse cx="0" cy="-55" rx="115" ry="38" fill="#FFB703"/>
+    <!-- Passion fruit gloss mirror -->
+    <ellipse cx="-15" cy="-58" rx="85" ry="25" fill="#FD9E02" opacity="0.8"/>
+    <!-- Passion fruit seeds -->
+    <ellipse cx="-45" cy="-62" rx="4" ry="7" fill="#4B2810" transform="rotate(-20 -45 -62)"/>
+    <ellipse cx="15" cy="-68" rx="4" ry="7" fill="#4B2810" transform="rotate(35 15 -68)"/>
+    <ellipse cx="40" cy="-52" rx="3.5" ry="6" fill="#4B2810" transform="rotate(-15 40 -52)"/>
+    <ellipse cx="-10" cy="-48" rx="3" ry="5.5" fill="#4B2810" transform="rotate(40 -10 -48)"/>
+    <ellipse cx="65" cy="-60" rx="4" ry="6.5" fill="#4B2810" transform="rotate(10 65 -60)"/>
+    <!-- Whipped cream dollop -->
+    <circle cx="0" cy="-70" r="14" fill="#FFFFFF"/>
+    <!-- Mint sprig -->
+    <path d="M 0 -82 C -8 -92, -15 -85, 0 -72" fill="#52B788"/>
+    <path d="M 0 -82 C 8 -92, 15 -85, 0 -72" fill="#2D6A4F"/>
+  </g>
+
+  <!-- Badge -->
+  <g transform="translate(460, 30)">
+    <rect width="110" height="32" rx="16" fill="#4A2E18" opacity="0.85"/>
+    <text x="55" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#FFF" text-anchor="middle" letter-spacing="1">Signature</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F4F24"/><stop offset="100%" stop-color="#462408"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#2C1810" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F2E9E4"/>
+      <stop offset="100%" stop-color="#E2D4CC"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  
+  <ellipse cx="300" cy="310" rx="220" ry="60" fill="#000000" opacity="0.1" filter="url(#softShadow)"/>
+  <ellipse cx="300" cy="305" rx="210" ry="50" fill="url(#plateGrad)"/>
+  <ellipse cx="300" cy="305" rx="180" ry="40" fill="none" stroke="#DDA15E" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- French Butter Croissant -->
+  <g transform="translate(300, 240)">
+    <!-- Main crescent curve layers -->
+    <path d="M -110 30 C -120 -10, -80 -40, -40 -35 C -10 -40, 10 -40, 40 -35 C 80 -40, 120 -10, 110 30 C 85 5, 45 15, 0 10 C -45 15, -85 5, -110 30 Z" fill="#D4A373" stroke="#A97142" stroke-width="3"/>
+    <!-- Outer flake layer (baked golden-brown) -->
+    <path d="M -80 15 C -80 -25, -45 -50, 0 -50 C 45 -50, 80 -25, 80 15 C 50 -5, -50 -5, -80 15 Z" fill="#BC6C25" stroke="#934B00" stroke-width="2.5"/>
+    <!-- Center roll ridge (deep golden crispy crust) -->
+    <path d="M -50 0 C -50 -35, -25 -58, 0 -58 C 25 -58, 50 -35, 50 0 C 30 -12, -30 -12, -50 0 Z" fill="#934B00" stroke="#683400" stroke-width="2"/>
+    <!-- Honey shine highlight -->
+    <ellipse cx="0" cy="-35" rx="25" ry="12" fill="#FFDD80" opacity="0.45"/>
+    <!-- Flaky slits/scores -->
+    <path d="M -30 -30 C -25 -20, -22 -10, -25 0" stroke="#683400" stroke-width="2.5" fill="none"/>
+    <path d="M 0 -38 C 0 -24, 0 -10, 0 0" stroke="#683400" stroke-width="2.5" fill="none"/>
+    <path d="M 30 -30 C 25 -20, 22 -10, 25 0" stroke="#683400" stroke-width="2.5" fill="none"/>
+    <!-- Flakes on the plate -->
+    <polygon points="-90,45 -82,47 -85,42" fill="#BC6C25"/>
+    <polygon points="75,44 85,46 80,41" fill="#BC6C25"/>
+    <polygon points="-15,48 -5,49 -10,46" fill="#D4A373"/>
+  </g>
+
+  <!-- Badge -->
+  <g transform="translate(460, 30)">
+    <rect width="110" height="32" rx="16" fill="#4A2E18" opacity="0.85"/>
+    <text x="55" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#FFF" text-anchor="middle" letter-spacing="1">Fresh Baked</text>
+  </g>
+</svg>

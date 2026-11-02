@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <rect width="300" height="300" rx="150" fill="#F7D6D0"/>
+  <circle cx="150" cy="130" r="50" fill="#E8C39E"/>
+  <!-- Hair bun & Headband -->
+  <circle cx="150" cy="70" r="25" fill="#4A2810"/>
+  <rect x="100" y="90" width="100" height="12" rx="6" fill="#E29578"/>
+  <path d="M 135 150 Q 150 165 165 150" fill="none" stroke="#4A2810" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="135" cy="130" r="4" fill="#4A2810"/>
+  <circle cx="165" cy="130" r="4" fill="#4A2810"/>
+  <path d="M 70 270 C 70 200, 230 200, 230 270 Z" fill="#FFFDF0" stroke="#E29578" stroke-width="3"/>
+  <circle cx="150" cy="225" r="5" fill="#E29578"/>
+  <circle cx="150" cy="245" r="5" fill="#E29578"/>
+</svg>

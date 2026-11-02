@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Crumbs — Freshly Baked Happiness, Every Day</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Bakery Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar text-center">
+    <i class="bi bi-stars me-2"></i> Celebrating the joy of baking! Complimentary handcrafted cookie with every online order above ₹500.
+  </div>
+
+  <!-- Header / Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/images/logo.svg" alt="Sweet Crumbs Logo" class="navbar-brand-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sweetNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="sweetNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order Online</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="order.html" class="btn btn-nav-order"><i class="bi bi-bag-heart me-1"></i> Order Now</a>
+          <a href="admin-login.html" class="btn btn-sm btn-outline-secondary rounded-pill px-3" title="Admin Portal"><i class="bi bi-shield-lock"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 text-center text-lg-start">
+          <span class="section-badge"><i class="bi bi-flower1 me-1"></i> Artisan Bakery &amp; Patisserie</span>
+          <h1 class="hero-headline">Freshly Baked <span>Happiness</span>, Every Day.</h1>
+          <p class="hero-description">
+            Experience handcrafted celebration cakes, velvet cupcakes, melt-in-your-mouth cookies, and artisanal pastries baked daily from scratch with wholesome European butter and Madagascar vanilla.
+          </p>
+          <div class="d-flex flex-wrap gap-3 hero-buttons">
+            <a href="products.html" class="btn btn-primary-bakery"><i class="bi bi-cake2 me-2"></i> Explore Our Treats</a>
+            <a href="order.html" class="btn btn-outline-bakery"><i class="bi bi-calendar2-heart me-2"></i> Custom Orders</a>
+          </div>
+          <!-- Trust Badges -->
+          <div class="row pt-4 mt-3 border-top g-3">
+            <div class="col-4">
+              <h5 class="fw-bold mb-0">100%</h5>
+              <small class="text-muted">Fresh Daily</small>
+            </div>
+            <div class="col-4">
+              <h5 class="fw-bold mb-0">15,000+</h5>
+              <small class="text-muted">Cakes Delivered</small>
+            </div>
+            <div class="col-4">
+              <h5 class="fw-bold mb-0">4.9 / 5</h5>
+              <small class="text-muted">Client Rating</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="assets/images/hero-banner.svg" alt="Sweet Crumbs Cake &amp; Pastry Showcase" class="hero-banner-img img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="py-5" id="featured-products">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-badge">Chef's Highlights</span>
+        <h2 class="section-title">Our Signature Creations</h2>
+        <p class="section-subtitle">A curated selection of our most loved birthday cakes, silky cupcakes, and crunchy cookies.</p>
+      </div>
+
+      <!-- Dynamic Product Grid from Backend -->
+      <div class="row g-4" id="featured-products-grid">
+        <!-- Rendered by main.js from /api/products -->
+        <div class="col-12 text-center py-5">
+          <div class="spinner-border text-warning" role="status"></div>
+          <p class="mt-3 text-muted">Loading fresh bakery treats from the oven...</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="products.html" class="btn btn-outline-bakery px-4 py-2"><i class="bi bi-grid me-2"></i> View Complete Menu (18+ Delicacies)</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Occasions Banner -->
+  <section class="py-4">
+    <div class="container">
+      <div class="promo-banner">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <span class="badge bg-warning text-dark mb-2 px-3 py-2 rounded-pill font-monospace">CUSTOM DESIGNS</span>
+            <h3>Dreaming of a Customized Celebration Cake?</h3>
+            <p>From whimsical birthday themes and elegant multi-tiered wedding cakes to corporate milestones, our master decorators bring your sweetest visions to life.</p>
+            <a href="order.html" class="btn btn-light rounded-pill px-4 py-2 fw-semibold text-dark"><i class="bi bi-pencil-square me-1"></i> Reserve Your Custom Cake</a>
+          </div>
+          <div class="col-lg-4 text-center mt-4 mt-lg-0">
+            <i class="bi bi-gift text-warning" style="font-size: 6rem; opacity: 0.85;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-white">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-badge">The Sweet Crumbs Difference</span>
+        <h2 class="section-title">Why Sweet Lovers Choose Us</h2>
+        <p class="section-subtitle">We believe authentic flavor begins with wholesome, natural ingredients and old-world passion.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-patch-check"></i>
+            </div>
+            <h4>Farm-Fresh Dairy</h4>
+            <p>Pure clarified butter, farm milk, and real heavy whipping cream without chemical stabilizers.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-clock-history"></i>
+            </div>
+            <h4>Baked Daily at Dawn</h4>
+            <p>Every single sponge, pastry crust, and cookie batch is freshly baked on the very morning of delivery.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-egg"></i>
+            </div>
+            <h4>100% Eggless Options</h4>
+            <p>Enjoy our extensive range of dedicated vegetarian and eggless cakes without sacrificing moisture or texture.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <h4>Zero Artificial Preservatives</h4>
+            <p>We pride ourselves on 0% chemical shelf-life enhancers, using only authentic Belgian chocolate and cocoa.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <span class="section-badge">Client Words</span>
+        <h2 class="section-title">Sweet Moments &amp; Smiles</h2>
+        <p class="section-subtitle">Real experiences shared by our dessert connoisseurs and celebration hosts.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "The Belgian Chocolate Truffle Cake we ordered for my sister's 25th birthday was pure decadence! It was moist, rich, and not overly sweet. Everyone at the party wanted seconds!"
+            </p>
+            <div class="testimonial-author">Priya Sharma</div>
+            <div class="testimonial-badge-sample">Birthday Host &bull; Verified Review (Sample)</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Their Red Velvet Cupcakes with cream cheese frosting are by far the best in town. Fluffy, melt-in-the-mouth, and packaged so beautifully with silk ribbons. A true 10/10!"
+            </p>
+            <div class="testimonial-author">Arjun Mehta</div>
+            <div class="testimonial-badge-sample">Dessert Enthusiast &bull; Verified Review (Sample)</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="testimonial-text">
+              "Prompt delivery and intact presentation! The Walnut Fudge Brownies were gooey and warmed up wonderfully. Ordering through the website took under two minutes."
+            </p>
+            <div class="testimonial-author">Ananya Sen</div>
+            <div class="testimonial-badge-sample">Corporate Client &bull; Verified Review (Sample)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="py-5 bg-white border-top">
+    <div class="container py-3">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-6">
+          <i class="bi bi-envelope-paper-heart text-warning" style="font-size: 2.5rem;"></i>
+          <h3 class="mt-2 mb-2 font-heading">Stay in the Sweet Loop</h3>
+          <p class="text-muted mb-4">Subscribe for weekend chef specials, secret recipes, and seasonal holiday pastry drops.</p>
+          <form id="newsletter-form" class="d-flex gap-2 justify-content-center" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Sweet Crumbs Sweet Letters!'); this.reset();">
+            <input type="email" class="form-control rounded-pill px-4" placeholder="Enter your email address..." required style="max-width: 360px;">
+            <button type="submit" class="btn btn-primary-bakery px-4"><i class="bi bi-send me-1"></i> Join</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-bakery">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <img src="assets/images/logo.svg" alt="Sweet Crumbs Logo" style="height: 52px; filter: brightness(0) invert(1); margin-bottom: 20px;">
+          <p class="text-light-50">
+            Handcrafting happiness one crumb at a time. Pure European butter, Belgian chocolate, and genuine artisan bakery hospitality.
+          </p>
+          <div class="d-flex gap-3 text-warning fs-5">
+            <a href="#" class="text-warning"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-warning"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-warning"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-warning"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">All Treats</a></li>
+            <li><a href="order.html">Order Online</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Opening Hours</h5>
+          <ul class="text-light-50">
+            <li><strong>Mon - Fri:</strong> 8:00 AM – 9:30 PM</li>
+            <li><strong>Saturday:</strong> 8:00 AM – 10:30 PM</li>
+            <li><strong>Sunday:</strong> 9:00 AM – 10:00 PM</li>
+            <li class="mt-2 text-warning"><i class="bi bi-bicycle me-1"></i> Fresh Delivery Daily</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5>Bakery Studio</h5>
+          <p class="text-light-50 mb-2">
+            <i class="bi bi-geo-alt-fill text-warning me-2"></i> 42 Baker's Promenade, Rosewood Lane, Connaught Place, New Delhi 110001
+          </p>
+          <p class="text-light-50 mb-2">
+            <i class="bi bi-telephone-fill text-warning me-2"></i> +91 98765 43210
+          </p>
+          <p class="text-light-50">
+            <i class="bi bi-envelope-fill text-warning me-2"></i> hello@sweetcrumbs.local
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; 2026 Sweet Crumbs Artisan Bakery. Designed for Web Programming Examination Project. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F4F24"/><stop offset="100%" stop-color="#462B14"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#2C1810" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F2E9E4"/>
+      <stop offset="100%" stop-color="#E2D4CC"/>
+    </radialGradient>
+  </defs>
+  <!-- Background with warm gradient -->
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  
+  <!-- Bakery table surface / marble plate -->
+  <ellipse cx="300" cy="310" rx="220" ry="60" fill="#000000" opacity="0.1" filter="url(#softShadow)"/>
+  <ellipse cx="300" cy="305" rx="210" ry="50" fill="url(#plateGrad)"/>
+  <ellipse cx="300" cy="305" rx="180" ry="40" fill="none" stroke="#DDA15E" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Bakery Illustration Artwork -->
+  
+    <g transform="translate(300, 240)">
+      <!-- Cookie stack -->
+      <!-- Back cookie -->
+      <circle cx="-40" cy="10" r="65" fill="#D4A373" stroke="#B07D62" stroke-width="3"/>
+      <circle cx="-70" cy="-10" r="9" fill="#3D1D0B"/>
+      <circle cx="-40" cy="30" r="8" fill="#3D1D0B"/>
+      <!-- Front cookie -->
+      <circle cx="30" cy="-10" r="75" fill="#E6CCB2" stroke="#BC6C25" stroke-width="4"/>
+      <!-- Molten chocolate chips -->
+      <circle cx="-5" cy="-45" r="12" fill="#2E1705"/>
+      <circle cx="45" cy="-50" r="10" fill="#2E1705"/>
+      <circle cx="10" cy="-10" r="14" fill="#2E1705"/>
+      <circle cx="65" cy="-5" r="11" fill="#2E1705"/>
+      <circle cx="40" cy="30" r="13" fill="#2E1705"/>
+      <circle cx="-10" cy="25" r="12" fill="#2E1705"/>
+      <circle cx="-25" cy="-15" r="10" fill="#2E1705"/>
+    </g>
+    
+
+  <!-- Badge -->
+  <g transform="translate(460, 30)">
+    <rect width="110" height="32" rx="16" fill="#4A2E18" opacity="0.85"/>
+    <text x="55" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#FFF" text-anchor="middle" letter-spacing="1">Fresh Baked</text>
+  </g>
+</svg>

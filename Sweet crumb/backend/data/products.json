@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "Belgian Chocolate Truffle Cake",
+    "description": "Rich layers of moist dark chocolate sponge draped in velvety Belgian ganache and chocolate curls.",
+    "category": "Birthday Cakes",
+    "price": 749,
+    "image_url": "assets/images/cake-chocolate.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Red Velvet Cream Cheese Cake",
+    "description": "Traditional crimson sponge layered with luxurious cream cheese frosting and white chocolate pearls.",
+    "category": "Birthday Cakes",
+    "price": 799,
+    "image_url": "assets/images/cake-redvelvet.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Classic Vanilla Buttercream Cake",
+    "description": "Light and tender golden vanilla sponge infused with real Madagascar vanilla bean and pastel rosettes.",
+    "category": "Birthday Cakes",
+    "price": 649,
+    "image_url": "assets/images/cake-vanilla.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 4,
+    "name": "Mango Passion Fruit Cheesecake",
+    "description": "Silky New York baked cheesecake layered with tropical Ratnagiri mango glaze and passion fruit pulp.",
+    "category": "Birthday Cakes",
+    "price": 849,
+    "image_url": "assets/images/cake-mangopassion.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "name": "Salted Caramel Crunch Cupcake",
+    "description": "Golden caramel sponge stuffed with liquid caramel and crowned with salted butter fudge swirls.",
+    "category": "Cupcakes",
+    "price": 349,
+    "image_url": "assets/images/cupcake-caramel.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "name": "Blueberry Swirl Cupcake",
+    "description": "Fluffy buttermilk cupcake with wild blueberry compote center and lilac vanilla swirl.",
+    "category": "Cupcakes",
+    "price": 380,
+    "image_url": "assets/images/cupcake-blueberry.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "name": "Double Chocolate Fudge Cupcake",
+    "description": "Decadent dark cocoa cupcake topped with whipped chocolate silk and dark cocoa nibs.",
+    "category": "Cupcakes",
+    "price": 360,
+    "image_url": "assets/images/cupcake-chocolate.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 8,
+    "name": "Lotus Biscoff Crumble Cupcake",
+    "description": "Spiced speculoos sponge infused with molten cookie butter and crowned with crunchy Biscoff biscuit crumble.",
+    "category": "Cupcakes",
+    "price": 399,
+    "image_url": "assets/images/cupcake-biscoff.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 9,
+    "name": "Belgian Choco-Chip Cookies",
+    "description": "Golden crisp edges with a gooey, molten chocolate center baked with premium dark chocolate chunks.",
+    "category": "Cookies",
+    "price": 280,
+    "image_url": "assets/images/cookie-chocochip.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 10,
+    "name": "Almond Oat Butter Crisps",
+    "description": "Toasted California almonds and wholesome rolled oats infused with golden clarified butter and honey.",
+    "category": "Cookies",
+    "price": 320,
+    "image_url": "assets/images/cookie-almond.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 11,
+    "name": "Pistachio Cranberry Shortbread",
+    "description": "Melt-in-mouth golden French butter shortbread studded with Iranian pistachios and tart dried cranberries.",
+    "category": "Cookies",
+    "price": 340,
+    "image_url": "assets/images/cookie-pistachio.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "name": "Fresh Strawberry Glaze Pastry",
+    "description": "Airy puff pastry layered with Chantilly cream and crowned with fresh glazed Mahabaleshwar strawberries.",
+    "category": "Pastries",
+    "price": 160,
+    "image_url": "assets/images/pastry-strawberry.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 13,
+    "name": "Black Forest Cherry Pastry",
+    "description": "Classic German layers of chocolate genoise, Kirsch-infused cream and sour Amarena cherries.",
+    "category": "Pastries",
+    "price": 180,
+    "image_url": "assets/images/pastry-blackforest.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 14,
+    "name": "Classic Italian Tiramisu Pastry",
+    "description": "Espresso-soaked Savoiardi ladyfingers draped in whipped mascarpone custard and dusted with Dutch cocoa.",
+    "category": "Pastries",
+    "price": 210,
+    "image_url": "assets/images/pastry-tiramisu.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 15,
+    "name": "Butter Croissant with Honey Glaze",
+    "description": "Flaky, golden 27-layer French laminated pastry baked with pure Normandy butter and light blossom honey.",
+    "category": "Pastries",
+    "price": 190,
+    "image_url": "assets/images/pastry-croissant.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 16,
+    "name": "Sizzling Walnut Fudge Brownie",
+    "description": "Chewy, intensely fudgy dark chocolate square packed with roasted Californian walnut halves.",
+    "category": "Brownies",
+    "price": 220,
+    "image_url": "assets/images/brownie-walnut.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 17,
+    "name": "Nutella Overload Brownie",
+    "description": "Warm gooey brownie smothered in generous layers of hazelnut Nutella spread and toasted hazelnuts.",
+    "category": "Brownies",
+    "price": 250,
+    "image_url": "assets/images/brownie-nutella.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  },
+  {
+    "id": 18,
+    "name": "Triple Chocolate Salted Brownie",
+    "description": "Dense triple chocolate fudge square with milk, dark, and white chocolate chunks finished with Maldon sea salt flakes.",
+    "category": "Brownies",
+    "price": 260,
+    "image_url": "assets/images/brownie-triplechoc.svg",
+    "available": 1,
+    "created_at": "2026-10-12T10:00:00.000Z"
+  }
+]

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1508"/><stop offset="100%" stop-color="#140702"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#2C1810" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F2E9E4"/>
+      <stop offset="100%" stop-color="#E2D4CC"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  
+  <ellipse cx="300" cy="310" rx="220" ry="60" fill="#000000" opacity="0.1" filter="url(#softShadow)"/>
+  <ellipse cx="300" cy="305" rx="210" ry="50" fill="url(#plateGrad)"/>
+  <ellipse cx="300" cy="305" rx="180" ry="40" fill="none" stroke="#DDA15E" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Triple Chocolate Salted Brownie -->
+  <g transform="translate(300, 240)">
+    <!-- Shadow beneath brownie block -->
+    <polygon points="-90,45 80,45 100,20 -70,20" fill="#000" opacity="0.15"/>
+    <!-- Brownie 3D Isometric block -->
+    <!-- Front Face -->
+    <polygon points="-80,40 70,40 70,0 -80,0" fill="#241107" stroke="#160802" stroke-width="2"/>
+    <!-- Right Face -->
+    <polygon points="70,40 100,15 100,-25 70,0" fill="#381B0C" stroke="#160802" stroke-width="2"/>
+    <!-- Top Face (Glossy cracked crust) -->
+    <polygon points="-80,0 70,0 100,-25 -50,-25" fill="#4A2510" stroke="#160802" stroke-width="2"/>
+    <!-- Crinkly paper crust cracks -->
+    <line x1="-60" y1="-8" x2="-20" y2="-12" stroke="#683416" stroke-width="2"/>
+    <line x1="-20" y1="-12" x2="30" y2="-8" stroke="#683416" stroke-width="2"/>
+    <line x1="10" y1="-18" x2="60" y2="-16" stroke="#683416" stroke-width="2"/>
+    <!-- White chocolate chunks -->
+    <polygon points="-40,-12 -30,-15 -25,-8 -35,-5" fill="#FFF8E7" stroke="#E6D3A3" stroke-width="1"/>
+    <polygon points="40,-18 52,-20 48,-12 36,-10" fill="#FFF8E7" stroke="#E6D3A3" stroke-width="1"/>
+    <!-- Milk chocolate chunks on top & side -->
+    <polygon points="5,-14 20,-16 18,-6 2,-5" fill="#78350F"/>
+    <polygon points="-60,18 -48,15 -50,28 -62,30" fill="#78350F"/>
+    <!-- Dark chocolate molten drip -->
+    <path d="M 60 0 C 65 15, 68 25, 68 30 C 68 35, 75 35, 75 25 L 75 0" fill="#1C0A03"/>
+    <!-- Sea salt pyramid crystals -->
+    <polygon points="-50,-18 -44,-22 -42,-16" fill="#FFFFFF" opacity="0.9"/>
+    <polygon points="15,-10 21,-14 23,-8" fill="#FFFFFF" opacity="0.9"/>
+    <polygon points="65,-12 70,-15 72,-9" fill="#FFFFFF" opacity="0.9"/>
+    <polygon points="-10,-18 -5,-21 -3,-16" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Badge -->
+  <g transform="translate(460, 30)">
+    <rect width="110" height="32" rx="16" fill="#4A2E18" opacity="0.85"/>
+    <text x="55" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#FFF" text-anchor="middle" letter-spacing="1">Decadent</text>
+  </g>
+</svg>

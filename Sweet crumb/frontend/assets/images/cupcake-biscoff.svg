@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B3F00"/><stop offset="100%" stop-color="#4A2500"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#2C1810" flood-opacity="0.25"/>
+    </filter>
+    <radialGradient id="plateGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="85%" stop-color="#F2E9E4"/>
+      <stop offset="100%" stop-color="#E2D4CC"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  
+  <ellipse cx="300" cy="310" rx="220" ry="60" fill="#000000" opacity="0.1" filter="url(#softShadow)"/>
+  <ellipse cx="300" cy="305" rx="210" ry="50" fill="url(#plateGrad)"/>
+  <ellipse cx="300" cy="305" rx="180" ry="40" fill="none" stroke="#DDA15E" stroke-width="2" stroke-opacity="0.4"/>
+
+  <!-- Lotus Biscoff Cupcake -->
+  <g transform="translate(300, 240)">
+    <!-- Cupcake Liner Base -->
+    <path d="M -60 40 L -75 -20 L 75 -20 L 60 40 Z" fill="#DDB892" stroke="#B08968" stroke-width="2"/>
+    <line x1="-50" y1="40" x2="-62" y2="-20" stroke="#7F5539" stroke-width="1.5"/>
+    <line x1="-25" y1="40" x2="-31" y2="-20" stroke="#7F5539" stroke-width="1.5"/>
+    <line x1="0" y1="40" x2="0" y2="-20" stroke="#7F5539" stroke-width="1.5"/>
+    <line x1="25" y1="40" x2="31" y2="-20" stroke="#7F5539" stroke-width="1.5"/>
+    <line x1="50" y1="40" x2="62" y2="-20" stroke="#7F5539" stroke-width="1.5"/>
+    <!-- Speculoos Muffin Sponge -->
+    <ellipse cx="0" cy="-20" rx="80" ry="24" fill="#A47148"/>
+    <!-- Swirled Speculoos Buttercream -->
+    <path d="M -75 -25 C -75 -65, -45 -75, -20 -70 C 0 -95, 45 -85, 65 -60 C 80 -40, 75 -25, 75 -25 Z" fill="#C68B59"/>
+    <!-- Top swirl crown -->
+    <ellipse cx="5" cy="-80" rx="35" ry="18" fill="#E6BA95"/>
+    <!-- Lotus cookie butter drip -->
+    <path d="M -25 -65 C -20 -45, -5 -40, -5 -55 C 5 -40, 25 -45, 20 -65" fill="#8C5C23"/>
+    <!-- Biscoff mini biscuit biscuit topper -->
+    <rect x="-12" y="-120" width="36" height="50" rx="4" fill="#B07D3E" stroke="#7F5539" stroke-width="2" transform="rotate(18 -12 -120)"/>
+    <circle cx="2" cy="-96" r="3" fill="#7F5539"/>
+    <circle cx="10" cy="-84" r="3" fill="#7F5539"/>
+    <!-- Crumbled speculoos crumbs -->
+    <circle cx="-35" cy="-35" r="2.5" fill="#8C5C23"/>
+    <circle cx="-15" cy="-40" r="3" fill="#B07D3E"/>
+    <circle cx="45" cy="-45" r="2" fill="#8C5C23"/>
+    <circle cx="35" cy="-30" r="2.5" fill="#B07D3E"/>
+  </g>
+
+  <!-- Badge -->
+  <g transform="translate(460, 30)">
+    <rect width="110" height="32" rx="16" fill="#4A2E18" opacity="0.85"/>
+    <text x="55" y="21" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#FFF" text-anchor="middle" letter-spacing="1">Trending</text>
+  </g>
+</svg>

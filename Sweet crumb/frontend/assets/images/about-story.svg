@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" width="700" height="500">
+  <defs>
+    <linearGradient id="aboutBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9F2"/>
+      <stop offset="100%" stop-color="#FCEEE9"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="500" rx="20" fill="url(#aboutBg)"/>
+  <!-- Oven & Kitchen counter -->
+  <rect x="80" y="140" width="220" height="280" rx="16" fill="#4A2E18"/>
+  <rect x="100" y="220" width="180" height="160" rx="10" fill="#2C1810"/>
+  <!-- Oven glass warm glow -->
+  <rect x="120" y="240" width="140" height="120" rx="8" fill="#F4A261" opacity="0.85"/>
+  <ellipse cx="190" cy="300" rx="50" ry="20" fill="#E76F51"/>
+  <!-- Loaves baking inside -->
+  <ellipse cx="190" cy="295" rx="35" ry="14" fill="#9C6644"/>
+  <!-- Counter top -->
+  <rect x="320" y="240" width="300" height="180" rx="12" fill="#E6CCB2"/>
+  <!-- Rolling pin -->
+  <rect x="360" y="220" width="180" height="16" rx="8" fill="#DDA15E" transform="rotate(-15 450 228)"/>
+  <!-- Flour dusting -->
+  <ellipse cx="480" cy="235" rx="60" ry="12" fill="#FFFFFF" opacity="0.8"/>
+  <!-- Chef hat -->
+  <g transform="translate(480, 100)">
+    <path d="M -40 40 C -60 10, -20 -30, 0 -20 C 20 -30, 60 10, 40 40 Z" fill="#FFFFFF" stroke="#E6CCB2" stroke-width="2"/>
+    <rect x="-35" y="40" width="70" height="15" rx="3" fill="#FFFFFF" stroke="#E6CCB2" stroke-width="1.5"/>
+  </g>
+</svg>
