@@ -37,7 +37,7 @@ echo FLUSH PRIVILEGES;
 ) > "%INIT_FILE_WIN%"
 
 echo.
-echo [3/5] Applying new password 'root123' to MySQL Server...
+echo [3/5] Applying new password to MySQL Server...
 start "" /b "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysqld.exe" --defaults-file="C:\ProgramData\MySQL\MySQL Server 8.0\my.ini" --init-file="%INIT_FILE_MYSQL%" --console
 timeout /t 8 /nobreak >nul
 
@@ -61,7 +61,6 @@ node backend/scripts/setup-db.js
 echo.
 echo ========================================================
 echo   SUCCESS!
-echo   - MySQL Password is now: root123
 echo   - sweet_crumbs_db has been created and populated!
 echo ========================================================
 echo.
